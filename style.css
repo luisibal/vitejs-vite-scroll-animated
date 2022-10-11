@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+body {
+  background-color: #131313;
+  color: #ffff;
+  font-family: 'Inter', sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+section {
+  display: grid;
+  place-items: center;
+  align-content: center;
+  min-height: 100vh;
+}
+
+/* animations */
+.hidden {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(-100%);
+  transition: all 1s;
+}
+.show {
+  filter: blur(0px);
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.logos {
+  margin-top: 50px;
+  display: flex;
+  gap: 50px;
+}
+
+.logo > svg {
+  color: salmon;
+  max-height: 100px;
+}
+
+.logo:nth-child(2) {
+  transition-delay: 150ms;
+}
+
+.logo:nth-child(3) {
+  transition-delay: 300ms;
+}
+
+.logo:nth-child(4) {
+  transition-delay: 450ms;
+}
+
+@media (prefers-reduced-motion) {
+  .hidden {
+    transition: none;
+  }
+}
